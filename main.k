@@ -107,7 +107,7 @@ nudt39aq7vwa8b1g-0
 
 FDN:Reverb(sig) {
 (nalb9f68n937sqnl-0) = #307
-(n6ag62qcrkjb9hhx-0) = Math:Mix(nd2l9ujhcpy5ua-0 nv3ufo64qq6lpguk-0 n90n1szcvr9nkn4y-0)
+(n6ag62qcrkjb9hhx-0) = Math:Mix(n90n1szcvr9nkn4y-0 nd2l9ujhcpy5ua-0 nv3ufo64qq6lpguk-0)
 (nojdsdt8kbdq1h3e-0) = n6ag62qcrkjb9hhx-0
 (no8xj03yu6cjmili-0) = 0.67
 (n3zvtyx9n8h0xmdk-0) = 0.67

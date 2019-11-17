@@ -16,9 +16,9 @@
  ["2myyq5ky1hsjved" 1] [:fixed "szv4wwqk6a8fi93" 0]
  ["2myyq5ky1hsjved" 2] [:fixed "yjwkizuakhyx39u" 0]
  ["4i17yi37cow930g" 0] [:fixed "2myyq5ky1hsjved" 0]
- ["6ag62qcrkjb9hhx" 0] [:fixed "d2l9ujhcpy5ua" 0]
- ["6ag62qcrkjb9hhx" 1] [:fixed "v3ufo64qq6lpguk" 0]
- ["6ag62qcrkjb9hhx" 2] [:fixed "90n1szcvr9nkn4y" 0]
+ ["6ag62qcrkjb9hhx" 0] [:fixed "90n1szcvr9nkn4y" 0]
+ ["6ag62qcrkjb9hhx" 1] [:fixed "d2l9ujhcpy5ua" 0]
+ ["6ag62qcrkjb9hhx" 2] [:fixed "v3ufo64qq6lpguk" 0]
  ["aoa2oa4vdf8j3nt" 0] [:fixed "wd3g7clndliyhd" 0]
  ["aoa2oa4vdf8j3nt" 2] [:fixed "z6owad3hj6na86e" 0]
  ["asw97ibhqk7jjjh" 0] [:fixed "11p5jtb29ir4nes" 0]
@@ -148,8 +148,8 @@
  }
  "6ag62qcrkjb9hhx" 
 {:cable-midpoints 
-{0 [41 232]
- 1 [28 87]}
+{1 [206 187]
+ 2 [31 83]}
  :color 4
  :inputs ["a" "b" "mix"]
  :label "Math:Mix($a $b $mix)"
@@ -241,7 +241,7 @@
  :label "sig = arg"
  :outputs ["sig"]
  :parsed "arg"
- :pos [-819 -2]
+ :pos [-868 57]
  }
  "dtrhu5bj7jom5f" 
 {:cable-midpoints 
@@ -263,7 +263,7 @@
  }
  "ixwp7w87g6dwro9" 
 {:cable-midpoints 
-{}
+{0 [54 -16]}
  :color 4
  :inputs ["sig" "delay-time" "buffer-size"]
  :label "Delay:Static-Delay($sig $delay-time $buffer-size)"
@@ -336,7 +336,7 @@
  }
  "szv4wwqk6a8fi93" 
 {:cable-midpoints 
-{1 [31 74]}
+{1 [33 89]}
  :color 4
  :ephemeral-inputs #{"set1"}
  :inputs ["func" "set1" "set..."]
