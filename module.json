@@ -1,0 +1,8 @@
+{
+  "dependencies": {},
+  "description": "This workspace contains patches you can export as plugins to other DAWs and host applications.",
+  "license": "https://www.eclipse.org/legal/epl-v10.html",
+  "version": "0.1",
+  "name": "Plugin Examples",
+  "url": "https://kronoslang.io"
+}

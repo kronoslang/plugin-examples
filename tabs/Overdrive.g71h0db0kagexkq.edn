@@ -1,0 +1,104 @@
+{:documentation "smooth saturation and overdrive with resonant filter"
+ :draft-argument "Gen:Saw(110) 16 * (1 + Gen:Sin(1))"
+ :export 
+{:arguments 
+{"drive" 
+{:default-value "4"
+ :max-value "16"
+ :min-value "1"
+ :signal-type "control"}
+ "sig" 
+{:default-value "0"
+ :signal-type "audio"}}
+ :export-this-tab true
+ :user-interface 
+{"resonance" true
+ "tone" true}}
+ :identifier "Overdrive"
+ :identity "g71h0db0kagexkq"
+ :patch
+{:cables
+{["2kr73c47ozxlbbv" 0] [:fixed "ubq715vpz57k7na" 0]
+ ["2kr73c47ozxlbbv" 1] [:fixed "409nqsejn8ngr1k" 0]
+ ["2kr73c47ozxlbbv" 2] [:fixed "8n4i3uzsrjfv0kr" 0]
+ ["2uy6yea1pbo0j5q" 0] [:fixed "3a5bfm84lqcf3t8" 0]
+ ["3a5bfm84lqcf3t8" 0] [:fixed "86h9mc7786fbyfk" 1]
+ ["3a5bfm84lqcf3t8" 1] [:fixed "86h9mc7786fbyfk" 0]
+ ["3pzbqe4jazu3bvp" 0] [:fixed "6n9932c3sysake9" 0]
+ ["6n9932c3sysake9" 0] [:fixed "s8jca2qwo6fa8ts" 0]
+ ["s8jca2qwo6fa8ts" 0] [:fixed "2kr73c47ozxlbbv" 0]
+ ["ubq715vpz57k7na" 0] [:fixed "2uy6yea1pbo0j5q" 0]}
+ :nodes
+{"2kr73c47ozxlbbv" 
+{:color 3
+ :inputs ["sig" "cutoff" "resonance"]
+ :label "Filter:Lowpass($sig $cutoff $resonance)"
+ :outputs [""]
+ :parsed [:fn "Filter:Lowpass" [:tuple [:free-var "sig"] [:free-var "cutoff"] [:free-var "resonance"]]]
+ :pos [106 134]}
+ "2uy6yea1pbo0j5q" 
+{:inputs ["sig"]
+ :label "Filter:Upsample($sig)"
+ :outputs [""]
+ :parsed [:fn "Filter:Upsample" [:tuple [:free-var "sig"]]]
+ :pos [-293 112]}
+ "3a5bfm84lqcf3t8" 
+{:inputs ["a" "b" "more..."]
+ :label "*"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more..."]]
+ :pos [-446 3]}
+ "3pzbqe4jazu3bvp" 
+{:inputs ["sig"]
+ :label "o))"
+ :outputs ["thru"]
+ :parsed [:playback [:free-var "sig"]]
+ :pos [628 219]}
+ "409nqsejn8ngr1k" 
+{:inputs []
+ :label "20 -x- 20000"
+ :name "tone"
+ :outputs [""]
+ :parsed [:widget "xapg5s" 0.924761962890625 {:type :slider, :limits [[:float "20"] [:float "20000"]], :render [:limits], :size 3, :orientation :vertical, :curve :exponential}]
+ :pos [-176 -158]}
+ "6n9932c3sysake9" 
+{:inputs ["sig"]
+ :label "Filter:Downsample($sig)"
+ :outputs [""]
+ :parsed [:fn "Filter:Downsample" [:tuple [:free-var "sig"]]]
+ :pos [465 131]}
+ "86h9mc7786fbyfk" 
+{:inputs []
+ :label "(sig drive) = arg"
+ :outputs ["sig" "drive"]
+ :parsed "arg"
+ :pos [-584 -110]}
+ "8n4i3uzsrjfv0kr" 
+{:inputs []
+ :label "0 .o 1"
+ :name "resonance"
+ :outputs [""]
+ :parsed [:widget "-yug761" 0.014999999999999902 {:type :dial, :skin :circular, :min [:float "0"], :max [:float "1"]}]
+ :pos [12 -144]}
+ "abp4747zrswfhb7" 
+{:inputs []
+ :label "; # Oversampled Overdrive #\n\n\nThis effect is a simple saturation with two\nsoft saturation stages with a resonant filter in between.\n\n\nWe make use of Kronos' multirate capabilities by\nupsampling the signal to double sample rate for the\nnonlinear section, shown in green."
+ :outputs []
+ :parsed [:comment "# Oversampled Overdrive #\n\n\nThis effect is a simple saturation with two\nsoft saturation stages with a resonant filter in between.\n\n\nWe make use of Kronos' multirate capabilities by\nupsampling the signal to double sample rate for the\nnonlinear section, shown in green."]
+ :pos [347 -290]}
+ "s8jca2qwo6fa8ts" 
+{:color 3
+ :inputs ["w"]
+ :label "Approx:Tanh($w)"
+ :outputs [""]
+ :parsed [:fn "Approx:Tanh" [:tuple [:free-var "w"]]]
+ :pos [281 134]}
+ "ubq715vpz57k7na" 
+{:color 3
+ :inputs ["w"]
+ :label "Approx:Tanh($w)"
+ :outputs [""]
+ :parsed [:fn "Approx:Tanh" [:tuple [:free-var "w"]]]
+ :pos [-74 134]}}
+ :scale 0.9124080917484451
+ :scroll [0 0]}}

@@ -1,0 +1,14 @@
+{:assets 
+{}
+ :current-tab 0
+ :file "plugins.veneer"
+ :manifest 
+{:dependencies 
+{}
+ :description "This workspace contains patches you can export as plugins to other DAWs and host applications."
+ :license "https://www.eclipse.org/legal/epl-v10.html"
+ :name "Plugin Examples"
+ :url "https://kronoslang.io"
+ :version "0.1"}
+ :name "plugin-examples"
+ :tabs ("tabs/Echo.c3yjgs318m4g93t.edn" "tabs/Chorus.a3w9xn7gjroo3qu.edn" "tabs/Overdrive.g71h0db0kagexkq.edn" "tabs/Schroeder.411vjqc8osrp8g3.edn" "tabs/FDN_Reverb.tcl6m3e2s8e37d.edn" "tabs/FDN_Delay.oolcc3xoisfrr68.edn" "tabs/FDN_Butterfly.38a7v8v6hs6kax8.edn")}

@@ -1,0 +1,196 @@
+{:draft-argument "Filter:Resonator(Gen:Phasor(0.5) 3000 3000) #1000 3 Gen:Phasor(0.1)"
+ :identifier "FDN:Delay"
+ :identity "oolcc3xoisfrr68"
+ :patch
+{:cables
+{["47ztv26ttbikcav" 0] [:fixed "932vwul0m2116si" 0]
+ ["47ztv26ttbikcav" 1] [:fixed "b766rgbf17uze2o" 1]
+ ["4y64x9m48ex16tf" 0] [:fixed "b766rgbf17uze2o" 1]
+ ["4y64x9m48ex16tf" 1] [:fixed "nlll11dhwziya8m" 0]
+ ["4y64x9m48ex16tf" 2] [:fixed "b766rgbf17uze2o" 2]
+ ["70m4bitfk1tkej5" 0] [:fixed "a5ifc9dpjpq1frq" 0]
+ ["70m4bitfk1tkej5" 1] [:fixed "vnyvbu8lqfvze1j" 0]
+ ["79code4wf2qm43m" 0] [:fixed "7zfz3aheytib6fi" 0]
+ ["79code4wf2qm43m" 1] [:fixed "47ztv26ttbikcav" 0]
+ ["7ccavv1pb4s43hq" 0] [:fixed "b766rgbf17uze2o" 1]
+ ["7hqkr04r43vu9yc" 0] [:fixed "a5ifc9dpjpq1frq" 0]
+ ["7hqkr04r43vu9yc" 1] [:fixed "4y64x9m48ex16tf" 0]
+ ["7zfz3aheytib6fi" 0] [:fixed "47ztv26ttbikcav" 0]
+ ["7zfz3aheytib6fi" 1] [:fixed "f1osj4ob19cqjrt" 0]
+ ["932vwul0m2116si" 0] [:fixed "ej46jug7kimnk00" 0]
+ ["932vwul0m2116si" 1] [:fixed "b766rgbf17uze2o" 0]
+ ["932vwul0m2116si" 2] [:fixed "o0pmb19379gqb2o" 0]
+ ["ccy1h7qljv501k2" 0] [:fixed "79code4wf2qm43m" 0]
+ ["ccy1h7qljv501k2" 1] [:fixed "70m4bitfk1tkej5" 0]
+ ["ej46jug7kimnk00" 2] [:fixed "ldkpwgw8oq0cj2b" 0]
+ ["jvycytdwi5bhyb0" 0] [:fixed "7zfz3aheytib6fi" 0]
+ ["jvycytdwi5bhyb0" 1] [:fixed "7hqkr04r43vu9yc" 0]
+ ["nlll11dhwziya8m" 0] [:fixed "b766rgbf17uze2o" 0]
+ ["o0pmb19379gqb2o" 0] [:fixed "7ccavv1pb4s43hq" 0]
+ ["o0pmb19379gqb2o" 1] [:fixed "dzaa031h5kfgu0x" 0]
+ ["vnyvbu8lqfvze1j" 0] [:fixed "4y64x9m48ex16tf" 0]
+ ["vnyvbu8lqfvze1j" 1] [:fixed "b766rgbf17uze2o" 3]
+ ["zii408cm69jmmow" 0] [:fixed "ccy1h7qljv501k2" 0]
+ ["zii408cm69jmmow" 1] [:fixed "jvycytdwi5bhyb0" 0]}
+ :nodes
+{"47ztv26ttbikcav" 
+{:cable-midpoints 
+{1 [366 1]}
+ :color 4
+ :inputs ["sig" "num-samples"]
+ :label "Delay:Sample-Delay($sig $num-samples)"
+ :name "delay"
+ :outputs [""]
+ :parsed [:fn "Delay:Sample-Delay" [:tuple [:free-var "sig"] [:free-var "num-samples"]]]
+ :pos [1 248]}
+ "4y64x9m48ex16tf" 
+{:cable-midpoints 
+{0 [77 -36]
+ 2 [219 -114]}
+ :ephemeral-inputs #{"more1"}
+ :inputs ["a" "b" "more1" "more..."]
+ :label "/"
+ :name "delay time per rt60"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "/" [:free-var "b"] [:free-var "more1"] [:free-var "more..."]]
+ :pos [-156 -228]}
+ "70m4bitfk1tkej5" 
+{:inputs ["a" "b"]
+ :label "Math:Pow($a $b)"
+ :outputs [""]
+ :parsed [:fn "Math:Pow" [:tuple [:free-var "a"] [:free-var "b"]]]
+ :pos [188 60]}
+ "79code4wf2qm43m" 
+{:color 4
+ :inputs ["a" "b" "more..."]
+ :label "-"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "-" [:free-var "b"] [:free-var "more..."]]
+ :pos [303 298]}
+ "7ccavv1pb4s43hq" 
+{:cable-midpoints 
+{0 [31 57]}
+ :inputs ["a" "b"]
+ :label "Math:Pow($a $b)"
+ :outputs [""]
+ :parsed [:fn "Math:Pow" [:tuple [:free-var "a"] [:free-var "b"]]]
+ :pos [-427 119]}
+ "7hqkr04r43vu9yc" 
+{:inputs ["a" "b"]
+ :label "Math:Pow($a $b)"
+ :outputs [""]
+ :parsed [:fn "Math:Pow" [:tuple [:free-var "a"] [:free-var "b"]]]
+ :pos [114 -167]}
+ "7zfz3aheytib6fi" 
+{:color 4
+ :inputs ["sig" "cutoff"]
+ :label "Filter:Lpf6($sig $cutoff)"
+ :name "crossover"
+ :outputs [""]
+ :parsed [:fn "Filter:Lpf6" [:tuple [:free-var "sig"] [:free-var "cutoff"]]]
+ :pos [198 163]}
+ "932vwul0m2116si" 
+{:cable-midpoints 
+{1 [209 -3]}
+ :color 4
+ :ephemeral-inputs #{"set1" "set2"}
+ :inputs ["func" "set1" "set2" "set..."]
+ :label "Algorithm:Reduce($func $set...)"
+ :name "allpass cascade"
+ :outputs [""]
+ :parsed [:fn "Algorithm:Reduce" [:tuple [:free-var "func"] [:free-var "set1"] [:free-var "set2"] [:free-var "set..."]]]
+ :pos [-192 248]}
+ "a5ifc9dpjpq1frq" 
+{:inputs []
+ :label "0.001"
+ :name "-60 dB"
+ :outputs [""]
+ :parsed [:float "0.001"]
+ :pos [-109 -28]}
+ "b766rgbf17uze2o" 
+{:inputs []
+ :label "(sig N rt60 tone) = arg"
+ :outputs ["sig" "N" "rt60" "tone"]
+ :parsed "arg"
+ :pos [-558 -146]}
+ "ccy1h7qljv501k2" 
+{:color 4
+ :inputs ["a" "b" "more..."]
+ :label "*"
+ :name "low loss"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more..."]]
+ :pos [425 163]}
+ "dzaa031h5kfgu0x" 
+{:inputs []
+ :label "[#0.81 #0.88]"
+ :outputs [""]
+ :parsed [:list [:invariant "0.81"] [:invariant "0.88"]]
+ :pos [-446 25]}
+ "ej46jug7kimnk00" 
+{:color 4
+ :inputs ["sig" "num-samples" "feedback"]
+ :label "Delay:Allpass-Comb($sig $num-samples $feedback)"
+ :outputs [""]
+ :parsed [:fn "Delay:Allpass-Comb" [:tuple [:free-var "sig"] [:free-var "num-samples"] [:free-var "feedback"]]]
+ :pos [-379 248]}
+ "f1osj4ob19cqjrt" 
+{:inputs []
+ :label "1000"
+ :outputs [""]
+ :parsed [:float "1000"]
+ :pos [57 125]}
+ "jvycytdwi5bhyb0" 
+{:color 4
+ :inputs ["a" "b" "more..."]
+ :label "*"
+ :name "high loss"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more..."]]
+ :pos [422 18]}
+ "ldkpwgw8oq0cj2b" 
+{:inputs []
+ :label "0.5"
+ :outputs [""]
+ :parsed [:float "0.5"]
+ :pos [-519 167]}
+ "nlll11dhwziya8m" 
+{:cable-midpoints 
+{0 [30 -32]}
+ :inputs ["sig"]
+ :label "Rate-of($sig)"
+ :name "sample rate"
+ :outputs [""]
+ :parsed [:fn "Rate-of" [:tuple [:free-var "sig"]]]
+ :pos [-388 -256]}
+ "o0pmb19379gqb2o" 
+{:ephemeral-inputs #{"set1"}
+ :inputs ["func" "set1" "set..."]
+ :label "Algorithm:Map($func $set...)"
+ :outputs [""]
+ :parsed [:fn "Algorithm:Map" [:tuple [:free-var "func"] [:free-var "set1"] [:free-var "set..."]]]
+ :pos [-290 118]}
+ "rnf3qehurcy4pbd" 
+{:inputs []
+ :label "; # Lossy Delay Line #\n\n\nThis delay line for FDN incorporates frequency-dependent loss for low- and high frequencies, as well as an allpass cascade to spread out reflections."
+ :outputs []
+ :parsed [:comment "# Lossy Delay Line #\n\n\nThis delay line for FDN incorporates frequency-dependent loss for low- and high frequencies, as well as an allpass cascade to spread out reflections."]
+ :pos [402 -277]}
+ "vnyvbu8lqfvze1j" 
+{:cable-midpoints 
+{1 [106 0]}
+ :inputs ["a" "b" "more..."]
+ :label "/"
+ :name "hi freq rt60"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "/" [:free-var "b"] [:free-var "more..."]]
+ :pos [123 -34]}
+ "zii408cm69jmmow" 
+{:color 4
+ :inputs ["a" "b" "more..."]
+ :label "+"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "+" [:free-var "b"] [:free-var "more..."]]
+ :pos [543 105]}}
+ :scale 1
+ :scroll [0 0]}}

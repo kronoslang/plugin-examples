@@ -1,0 +1,129 @@
+{:draft-argument "0.1 * Gen:Tri(330 + 220 * Gen:Sin(0.15)) 0.68 0.5 0.5"
+ :export 
+{:arguments 
+{"delay" 
+{:default-value "250"
+ :max-value "1000"
+ :min-value "80"
+ :signal-type "control"}
+ "feedback" 
+{:default-value "0"
+ :max-value "1"
+ :min-value "-1"
+ :signal-type "control"}
+ "mix" 
+{:default-value "0.5"
+ :max-value "1"
+ :min-value "0"
+ :signal-type "control"}
+ "sig" 
+{:default-value "0"
+ :signal-type "audio"}}
+ :export-this-tab true}
+ :identifier "Echo"
+ :identity "c3yjgs318m4g93t"
+ :patch
+{:cables
+{["2rk13dvn3qvj059" 0] [:fixed "h7w1zf62g6dt1q7" 3]
+ ["2rk13dvn3qvj059" 1] [:fixed "h7w1zf62g6dt1q7" 0]
+ ["2rk13dvn3qvj059" 2] [:fixed "b8zo3r5zcjs42bo" 0]
+ ["5tvdztkl550cw9m" 0] [:fixed "mgu4om8wiz37our" 0]
+ ["5tvdztkl550cw9m" 1] [:fixed "h7w1zf62g6dt1q7" 2]
+ ["b8zo3r5zcjs42bo" 0] [:fixed "5tvdztkl550cw9m" 0]
+ ["b8zo3r5zcjs42bo" 1] [:fixed "6ga99y9sata31c4" 0]
+ ["b8zo3r5zcjs42bo" 2] [:fixed "pyyl63b8z6o31cu" 0]
+ ["c3m7sqycp6dr1iv" 0] [:fixed "h7w1zf62g6dt1q7" 0]
+ ["c3m7sqycp6dr1iv" 1] [:fixed "pxeced5dt4yrdd6" 0]
+ ["mgu4om8wiz37our" 0] [:fixed "c3m7sqycp6dr1iv" 0]
+ ["mgu4om8wiz37our" 1] [:fixed "h7w1zf62g6dt1q7" 1]
+ ["mgu4om8wiz37our" 2] [:fixed "ab6jzo43ea18e13" 0]
+ ["pxeced5dt4yrdd6" 0] [:fixed "b8zo3r5zcjs42bo" 0]
+ ["wqtslut88cdjt6r" 0] [:fixed "2rk13dvn3qvj059" 0]}
+ :nodes
+{"2rk13dvn3qvj059" 
+{:cable-midpoints 
+{2 [7 86]}
+ :inputs ["a" "b" "mix"]
+ :label "Math:Mix($a $b $mix)"
+ :outputs [""]
+ :parsed [:fn "Math:Mix" [:tuple [:free-var "a"] [:free-var "b"] [:free-var "mix"]]]
+ :pos [-204 304]}
+ "5tvdztkl550cw9m" 
+{:cable-midpoints 
+{1 [182 -20]}
+ :inputs ["a" "b" "more..."]
+ :label "*"
+ :name "feedback"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more..."]]
+ :pos [66 97]}
+ "6ga99y9sata31c4" 
+{:inputs []
+ :label "20 -x- 20000"
+ :name "tone"
+ :outputs [""]
+ :parsed [:widget "-fvqvja" 0.7461905343191965 {:type :slider, :limits [[:float "20"] [:float "20000"]], :render [:limits], :size 3, :orientation :vertical, :curve :exponential}]
+ :pos [80 -199]}
+ "97wz64hwz2vaa69" 
+{:inputs []
+ :label "; # Echo #\n\n\nThis patch demonstrates a feedback path\nincluding a gain coefficient and a lowpass filter\nto produce a dampening echo."
+ :outputs []
+ :parsed [:comment "# Echo #\n\n\nThis patch demonstrates a feedback path\nincluding a gain coefficient and a lowpass filter\nto produce a dampening echo."]
+ :pos [416 -270]}
+ "ab6jzo43ea18e13" 
+{:inputs []
+ :label "#48000"
+ :outputs [""]
+ :parsed [:invariant "48000"]
+ :pos [-129 -33]}
+ "b8zo3r5zcjs42bo" 
+{:inputs ["sig" "cutoff" "resonance"]
+ :label "Filter:Lowpass($sig $cutoff $resonance)"
+ :name "high damp"
+ :outputs [""]
+ :parsed [:fn "Filter:Lowpass" [:tuple [:free-var "sig"] [:free-var "cutoff"] [:free-var "resonance"]]]
+ :pos [199 96]}
+ "c3m7sqycp6dr1iv" 
+{:cable-midpoints 
+{1 [-154 -201]}
+ :inputs ["a" "b" "more..."]
+ :label "+"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "+" [:free-var "b"] [:free-var "more..."]]
+ :pos [-279 -39]}
+ "h7w1zf62g6dt1q7" 
+{:inputs []
+ :label "(sig delay feedback mix) = arg"
+ :outputs ["sig" "delay" "feedback" "mix"]
+ :parsed "arg"
+ :pos [-457 -9]}
+ "mgu4om8wiz37our" 
+{:inputs ["sig" "delay-time" "buffer-size"]
+ :label "Delay:Static-Delay($sig $delay-time $buffer-size)"
+ :outputs [""]
+ :parsed [:fn "Delay:Static-Delay" [:tuple [:free-var "sig"] [:free-var "delay-time"] [:free-var "buffer-size"]]]
+ :pos [-108 98]
+ :selected true}
+ "pxeced5dt4yrdd6" 
+{:cable-midpoints 
+{0 [69 -1]}
+ :inputs ["sig~"]
+ :label "z-1($sig~)"
+ :name "feedback path"
+ :outputs [""]
+ :parsed [:fn "z-1" [:tuple [:free-var "sig~"]]]
+ :pos [396 -4]}
+ "pyyl63b8z6o31cu" 
+{:inputs []
+ :label "0"
+ :outputs [""]
+ :parsed [:float "0"]
+ :pos [218 2]}
+ "wqtslut88cdjt6r" 
+{:inputs ["sig"]
+ :label "o))"
+ :outputs ["thru"]
+ :parsed [:playback [:free-var "sig"]]
+ :pos [8 303]}}
+ :scale 1
+ :scroll [0 0]}}

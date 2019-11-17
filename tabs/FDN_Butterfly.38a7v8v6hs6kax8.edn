@@ -1,0 +1,134 @@
+{:draft-argument "[1 -1 1 -1 1 -1 1 -1]"
+ :identifier "FDN:Butterfly"
+ :identity "38a7v8v6hs6kax8"
+ :patch
+{:cables
+{["6tk47eb7r1rq4db" 0] [:fixed "gg2gd3ucqfakob" 0]
+ ["6tk47eb7r1rq4db" 1] [:fixed "phxvk1pgyywo4rj" 0]
+ ["hsa2fktt2agbewa" 0] [:fixed "llg81fwg2cgvitd" 0]
+ ["hsa2fktt2agbewa" 1] [:fixed "mkygvzq42ga2nv8" 0]
+ ["i2927v3ic94tz2i" 0] [:fixed "hsa2fktt2agbewa" 0]
+ ["i2927v3ic94tz2i" 1] [:fixed "gg2gd3ucqfakob" 0]
+ ["l975oenilf8ptmr" 0] [:fixed "6tk47eb7r1rq4db" 0]
+ ["llg81fwg2cgvitd" 0] [:fixed "uo0ar9qje7eixs" 0]
+ ["llg81fwg2cgvitd" 1] [:fixed "tb8k1xdqxvcu5mz" 0]
+ ["llg81fwg2cgvitd" 2] [:fixed "o98ahic32clz2dp" 0]
+ ["mkygvzq42ga2nv8" 0] [:fixed "pks7lwrztjgt9fh" 0]
+ ["mkygvzq42ga2nv8" 1] [:fixed "tb8k1xdqxvcu5mz" 0]
+ ["mkygvzq42ga2nv8" 2] [:fixed "o98ahic32clz2dp" 0]
+ ["o98ahic32clz2dp" 0] [:fixed "l975oenilf8ptmr" 0]
+ ["tb8k1xdqxvcu5mz" 0] [:fixed "l975oenilf8ptmr" 1]}
+ :nodes
+{"6tk47eb7r1rq4db" 
+{:cable-midpoints 
+{0 [72 0]}
+ :inputs ["v" "pred"]
+ :label "Constraints:Condition!($v $pred)"
+ :name "terminating condition"
+ :outputs [""]
+ :parsed [:fn "Constraints:Condition!" [:tuple [:free-var "v"] [:free-var "pred"]]]
+ :pos [-395 -63]}
+ "967eonlq3sg2ztu" 
+{:inputs []
+ :label "; `Polymorphic` node will choose the first legal dataflow and use it. In this case, the first data flow is invalidated by the `Condition!` node on the left hand side."
+ :outputs []
+ :parsed [:comment "`Polymorphic` node will choose the first legal dataflow and use it. In this case, the first data flow is invalidated by the `Condition!` node on the left hand side."]
+ :pos [532 288]}
+ "cqyeke1vrddut6p" 
+{:inputs []
+ :label "; because this function calls itself,\nwe need a terminating condition.\n\n\n`Condition!` imposes conditional flow: only if the incoming signal has multiple elements, as per the predicate, will the data flow continue."
+ :outputs []
+ :parsed [:comment "because this function calls itself,\nwe need a terminating condition.\n\n\n`Condition!` imposes conditional flow: only if the incoming signal has multiple elements, as per the predicate, will the data flow continue."]
+ :pos [-408 36]}
+ "gg2gd3ucqfakob" 
+{:inputs []
+ :label "xs = arg"
+ :outputs ["xs"]
+ :parsed "arg"
+ :pos [-561 -63]}
+ "hsa2fktt2agbewa" 
+{:cable-midpoints 
+{1 [40 41]}
+ :inputs ["as" "bs"]
+ :label "Algorithm:Concat($as $bs)"
+ :name "merge!"
+ :outputs [""]
+ :parsed [:fn "Algorithm:Concat" [:tuple [:free-var "as"] [:free-var "bs"]]]
+ :pos [338 167]}
+ "i2927v3ic94tz2i" 
+{:cable-midpoints 
+{1 [53 189]}
+ :ephemeral-inputs #{"forms1" "forms2"}
+ :flip-y true
+ :inputs ["forms1" "forms2" "forms..."]
+ :label "Polymorphic($forms...)"
+ :outputs [""]
+ :parsed [:fn "Polymorphic" [:tuple [:free-var "forms1"] [:free-var "forms2"] [:free-var "forms..."]]]
+ :pos [550 203]}
+ "l975oenilf8ptmr" 
+{:ephemeral-inputs #{"xs1"}
+ :inputs ["xs1" "xs..."]
+ :label "Algorithm:Split($xs...)"
+ :outputs ["" ""]
+ :parsed [:fn "Algorithm:Split" [:tuple [:free-var "xs1"] [:free-var "xs..."]]]
+ :pos [-220 -74]}
+ "llg81fwg2cgvitd" 
+{:color 3
+ :inputs ["func" "as" "bs"]
+ :label "Algorithm:Zip-With($func $as $bs)"
+ :name "sum"
+ :outputs [""]
+ :parsed [:fn "Algorithm:Zip-With" [:tuple [:free-var "func"] [:free-var "as"] [:free-var "bs"]]]
+ :pos [149 103]}
+ "mkygvzq42ga2nv8" 
+{:color 2
+ :inputs ["func" "as" "bs"]
+ :label "Algorithm:Zip-With($func $as $bs)"
+ :name "difference"
+ :outputs [""]
+ :parsed [:fn "Algorithm:Zip-With" [:tuple [:free-var "func"] [:free-var "as"] [:free-var "bs"]]]
+ :pos [345 56]}
+ "o98ahic32clz2dp" 
+{:color 2
+ :inputs ["xs"]
+ :label "Hadamaard($xs)"
+ :name "odd"
+ :outputs [""]
+ :parsed [:fn "FDN:Butterfly" [:tuple [:free-var "xs"]]]
+ :pos [-29 -122]}
+ "phxvk1pgyywo4rj" 
+{:inputs []
+ :label "v => Arity(v) > #1"
+ :outputs [""]
+ :parsed [:infix "v" "=>" [:infix [:fn "Arity" [:tuple "v"]] ">" [:invariant "1"]]]
+ :pos [-479 -188]}
+ "pks7lwrztjgt9fh" 
+{:color 2
+ :inputs ["a" "b" "more..."]
+ :label "-"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "-" [:free-var "b"] [:free-var "more..."]]
+ :pos [235 56]}
+ "tb8k1xdqxvcu5mz" 
+{:color 3
+ :inputs ["xs"]
+ :label "Hadamaard($xs)"
+ :name "even"
+ :outputs [""]
+ :parsed [:fn "FDN:Butterfly" [:tuple [:free-var "xs"]]]
+ :pos [-29 -2]}
+ "u2084yu23zj5h3e" 
+{:inputs []
+ :label "; # Butterfly Matrix #\n\n\nThis routine computes a multiplication with a\nHadamaard matrix by utilizing butterfly recursion."
+ :outputs []
+ :parsed [:comment "# Butterfly Matrix #\n\n\nThis routine computes a multiplication with a\nHadamaard matrix by utilizing butterfly recursion."]
+ :pos [-64 -316]}
+ "uo0ar9qje7eixs" 
+{:color 3
+ :inputs ["a" "b" "more..."]
+ :label "+"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "+" [:free-var "b"] [:free-var "more..."]]
+ :pos [34 103]}}
+ :scale 1
+ :scroll [0 0]}}
