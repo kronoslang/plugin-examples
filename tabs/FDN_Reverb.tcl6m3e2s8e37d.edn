@@ -181,7 +181,7 @@
  :name "high damp"
  :outputs [""]
  :parsed [:widget "de4r5g" 0.52 {:type :dial, :skin :circular, :min [:float "0"], :max [:float "1"]}]
- :pos [-220 112]
+ :pos [-236 89]
  }
  "90n1szcvr9nkn4y" 
 {:color 3

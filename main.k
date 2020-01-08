@@ -30,7 +30,7 @@ Chorus(in-1) {
 (nrqeib0ee7rswwi0-0) = #5000
 (nhlx2dbz6129subf-0) = (a) => ( (a * nni3znypb867l2e1-0 * n3dt7dgsm4x89iwb-0) ) 
 (nicnf391ux9twe3m-0) = (delay-time) => ( Delay:Dynamic-Delay(n3lx0rn1kok24gow-0 delay-time nrqeib0ee7rswwi0-0) ) 
-(ng8f6dzybvuqa9pg-0) = n9mc638mvwkened7-0
+(ng8f6dzybvuqa9pg-0) = nwts9akfnm7vkur2-0
 (n7tx6qlvmn9yckia-0) = (list) => ( Apply(nay58fb5794zio6o-0 list) ) 
 (n6tbc9fq1n15scy5-0) = Algorithm:Partition(n1pv7uueiitfgyf9-0 n3524crw6mo1ihnz-0 )
 (nni3znypb867l2e1-0) = 0.0005
@@ -38,13 +38,13 @@ Chorus(in-1) {
 (nay58fb5794zio6o-0) = (elements) => ( Vector:Cons(elements) ) 
 (ns3kan6d91lcwd55-0) = Algorithm:Map(n7tx6qlvmn9yckia-0 n6tbc9fq1n15scy5-0 )
 (n3lx0rn1kok24gow-0) = arg
-(n3dt7dgsm4x89iwb-0) = 0.55
-(n9mc638mvwkened7-0) = Math:Mix(n3lx0rn1kok24gow-0 nvzkgadesa5kja1c-0 nier36f6padjq1ow-0)
+(n3dt7dgsm4x89iwb-0) = 0.7550000000000001
 (n1pv7uueiitfgyf9-0) = #2
+(nwts9akfnm7vkur2-0) = Math:Mix(nier36f6padjq1ow-0 n3lx0rn1kok24gow-0 nvzkgadesa5kja1c-0)
 (n2clxe3svecp39p3-0) = [0 0.5 0.25 0.75]
 (nvzkgadesa5kja1c-0) = Average(ns3kan6d91lcwd55-0 )
 (ne669sjoprcql6ph-0) = (a) => ( (a + 1) ) 
-(nqs760eiqb4ydayl-0) = 0
+(nqs760eiqb4ydayl-0) = 0.075
 (n3524crw6mo1ihnz-0) = Algorithm:Map(n4mbl89lkdh9vwcp-0 n2clxe3svecp39p3-0 )
 (n4mbl89lkdh9vwcp-0) = Function:Pipeline(ntel0x2x7cx0t7wb-0 nhlx2dbz6129subf-0 ne669sjoprcql6ph-0 nicnf391ux9twe3m-0 )
 ng8f6dzybvuqa9pg-0
