@@ -42,7 +42,7 @@
  :label "#2"
  :outputs [""]
  :parsed [:invariant "2"]
- :pos [-96 -260]
+ :pos [118 -262]
  }
  "23b85fyddfsq4z0" 
 {:color 3
@@ -50,14 +50,14 @@
  :label "; to make the stereo effect,\nwe use partition to regroup the four\noscillators into a list of two pairs.\n\n\nWe apply `Vector:Cons` to each pair of oscillators,\nyielding a list of two vectored signals. The average of this\nis the gain-compensated stereo sum of our modulated delay lines."
  :outputs []
  :parsed [:comment "to make the stereo effect,\nwe use partition to regroup the four\noscillators into a list of two pairs.\n\n\nWe apply `Vector:Cons` to each pair of oscillators,\nyielding a list of two vectored signals. The average of this\nis the gain-compensated stereo sum of our modulated delay lines."]
- :pos [206 30]
+ :pos [420 28]
  }
  "2clxe3svecp39p3" 
 {:inputs []
  :label "[0 0.5 0.25 0.75]"
  :outputs [""]
  :parsed [:list [:float "0"] [:float "0.5"] [:float "0.25"] [:float "0.75"]]
- :pos [-443 -143]
+ :pos [-229 -145]
  }
  "3524crw6mo1ihnz" 
 {:ephemeral-inputs #{"set1"}
@@ -65,7 +65,7 @@
  :label "Algorithm:Map($func $set...)"
  :outputs [""]
  :parsed [:fn "Algorithm:Map" [:tuple [:free-var "func"] [:free-var "set1"] [:free-var "set..."]]]
- :pos [-99 44]
+ :pos [115 42]
  }
  "3dt7dgsm4x89iwb" 
 {:color 2
@@ -74,14 +74,14 @@
  :name "modulation depth"
  :outputs [""]
  :parsed [:widget "-m9inyj" 0.7550000000000001 {:type :dial, :skin :circular, :min [:float "5"], :max [:float "60"]}]
- :pos [-757 -39]
+ :pos [-543 -41]
  }
  "3lx0rn1kok24gow" 
 {:inputs []
  :label "arg"
  :outputs [""]
  :parsed "arg"
- :pos [-841 -307]
+ :pos [-627 -309]
  }
  "4mbl89lkdh9vwcp" 
 {:ephemeral-inputs #{"fns1" "fns2" "fns3" "fns4"}
@@ -89,7 +89,7 @@
  :label "Function:Pipeline($fns...)"
  :outputs [""]
  :parsed [:fn "Function:Pipeline" [:tuple [:free-var "fns1"] [:free-var "fns2"] [:free-var "fns3"] [:free-var "fns4"] [:free-var "fns..."]]]
- :pos [-328 264]
+ :pos [-114 262]
  }
  "5zvdl68ac6w10l5" 
 {:color 2
@@ -97,7 +97,7 @@
  :label ";### Modulator pipeline ###\n\n\nEach delay line is modulated by a low frequency sine oscillator,\nscaled as per the `modulation depth` setting and offset to be unipolar."
  :outputs []
  :parsed [:comment "### Modulator pipeline ###\n\n\nEach delay line is modulated by a low frequency sine oscillator,\nscaled as per the `modulation depth` setting and offset to be unipolar."]
- :pos [-661 286]
+ :pos [-447 284]
  }
  "6tbc9fq1n15scy5" 
 {:color 3
@@ -107,7 +107,7 @@
  :label "Algorithm:Partition($N $set...)"
  :outputs [""]
  :parsed [:fn "Algorithm:Partition" [:tuple [:free-var "N"] [:free-var "set1"] [:free-var "set..."]]]
- :pos [67 -259]
+ :pos [281 -261]
  }
  "7tx6qlvmn9yckia" 
 {:color 3
@@ -115,7 +115,7 @@
  :label "Apply($func $list)"
  :outputs [""]
  :parsed [:fn "Apply" [:tuple [:free-var "func"] [:free-var "list"]]]
- :pos [-32 -170]
+ :pos [182 -172]
  }
  "ay58fb5794zio6o" 
 {:color 3
@@ -123,14 +123,14 @@
  :label "Vector:Cons($elements)"
  :outputs [""]
  :parsed [:fn "Vector:Cons" [:tuple [:free-var "elements"]]]
- :pos [-142 -170]
+ :pos [72 -172]
  }
  "bf6lwk66qi11mwg" 
 {:inputs []
  :label ";# Chorus #\n\n\nThis quad chorus is built of four modulated delays\nwhose LFOs are out of phase to create a stereo effect."
  :outputs []
  :parsed [:comment "# Chorus #\n\n\nThis quad chorus is built of four modulated delays\nwhose LFOs are out of phase to create a stereo effect."]
- :pos [-279 -476]
+ :pos [-65 -478]
  }
  "e669sjoprcql6ph" 
 {:color 2
@@ -138,14 +138,14 @@
  :label "+ 1"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "+" [:float "1"]]
- :pos [-410 69]
+ :pos [-196 67]
  }
  "g8f6dzybvuqa9pg" 
 {:inputs ["sig"]
  :label "o))"
  :outputs ["thru"]
  :parsed [:playback [:free-var "sig"]]
- :pos [427 -270]
+ :pos [641 -272]
  }
  "hlx2dbz6129subf" 
 {:color 2
@@ -154,7 +154,7 @@
  :label "*"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more1"] [:free-var "more..."]]
- :pos [-500 145]
+ :pos [-286 143]
  }
  "icnf391ux9twe3m" 
 {:cable-midpoints 
@@ -163,7 +163,7 @@
  :label "Delay:Dynamic-Delay($sig $delay-time $buffer-size)"
  :outputs [""]
  :parsed [:fn "Delay:Dynamic-Delay" [:tuple [:free-var "sig"] [:free-var "delay-time"] [:free-var "buffer-size"]]]
- :pos [-360 6]
+ :pos [-146 4]
  }
  "ier36f6padjq1ow" 
 {:inputs []
@@ -171,7 +171,7 @@
  :name "mix"
  :outputs [""]
  :parsed [:widget "xdhghn" 0.48 {:type :dial, :skin :circular, :min [:float "0"], :max [:float "1"]}]
- :pos [136 -429]
+ :pos [350 -431]
  }
  "ni3znypb867l2e1" 
 {:color 2
@@ -179,7 +179,7 @@
  :label "0.0005"
  :outputs [""]
  :parsed [:float "0.0005"]
- :pos [-757 88]
+ :pos [-543 86]
  }
  "qs760eiqb4ydayl" 
 {:color 2
@@ -188,14 +188,14 @@
  :name "modulation rate"
  :outputs [""]
  :parsed [:widget "srtlgy" 0.075 {:type :dial, :skin :circular, :min [:float "0.01"], :max [:float "1"]}]
- :pos [-757 170]
+ :pos [-543 168]
  }
  "rqeib0ee7rswwi0" 
 {:inputs []
  :label "#5000"
  :outputs [""]
  :parsed [:invariant "5000"]
- :pos [-443 -76]
+ :pos [-229 -78]
  }
  "s3kan6d91lcwd55" 
 {:color 3
@@ -204,7 +204,7 @@
  :label "Algorithm:Map($func $set...)"
  :outputs [""]
  :parsed [:fn "Algorithm:Map" [:tuple [:free-var "func"] [:free-var "set1"] [:free-var "set..."]]]
- :pos [159 -109]
+ :pos [373 -111]
  }
  "tel0x2x7cx0t7wb" 
 {:color 2
@@ -212,7 +212,7 @@
  :label "Gen:Sin($freq $offset)"
  :outputs [""]
  :parsed [:fn "Gen:Sin" [:tuple [:free-var "freq"] [:free-var "offset"]]]
- :pos [-514 220]
+ :pos [-300 218]
  }
  "vzkgadesa5kja1c" 
 {:color 3
@@ -221,17 +221,17 @@
  :label "Average($numbers...)"
  :outputs [""]
  :parsed [:fn "Average" [:tuple [:free-var "numbers1"] [:free-var "numbers..."]]]
- :pos [292 -82]
+ :pos [506 -84]
  }
  "wts9akfnm7vkur2" 
 {:cable-midpoints 
-{1 [731 3]}
+{1 [208 -1]}
  :flip-y true
  :inputs ["mix" "a" "b"]
  :label "Math:Mix($mix $a $b)"
  :outputs [""]
  :parsed [:fn "Math:Mix" [:tuple [:free-var "mix"] [:free-var "a"] [:free-var "b"]]]
- :pos [282 -364]
+ :pos [496 -366]
  }}
  :scale 0.8249498714064244
  :scroll [0 0]}}

@@ -60,8 +60,7 @@
  :name "delay times"
  :outputs [""]
  :parsed [:fn "Algorithm:Expand" [:tuple [:free-var "count"] [:free-var "iterator"] [:free-var "seed"]]]
- :pos [-275 -405]
- }
+ :pos [-275 -405]}
  "2gfh2v69fcnf1sz" 
 {:cable-midpoints 
 {1 [28 269]}
@@ -71,16 +70,14 @@
  :name "wet/dry mix"
  :outputs [""]
  :parsed [:fn "Math:Mix" [:tuple [:free-var "h"] [:free-var "x0"] [:free-var "x1"]]]
- :pos [235 408]
- }
+ :pos [235 408]}
  "3n9uio6rre0lsaz" 
 {:color 4
  :inputs ["sig" "num-samples" "feedback"]
  :label "Delay:Allpass-Comb($sig $num-samples $feedback)"
  :outputs [""]
  :parsed [:fn "Delay:Allpass-Comb" [:tuple [:free-var "sig"] [:free-var "num-samples"] [:free-var "feedback"]]]
- :pos [-22 283]
- }
+ :pos [-22 283]}
  "47n5122am71j9nf" 
 {:color 3
  :inputs []
@@ -88,8 +85,7 @@
  :name "wet/dry"
  :outputs [""]
  :parsed [:widget "sdf6tu" 0.7349999999999999 {:type :dial, :skin :circular, :min [:float "0"], :max [:float "1"]}]
- :pos [60 396]
- }
+ :pos [60 396]}
  "4m9k5w1aybgi152" 
 {:color 3
  :inputs []
@@ -97,8 +93,7 @@
  :name "decay"
  :outputs [""]
  :parsed [:widget "7zzf7n" 0.5249999999999999 {:type :dial, :skin :circular, :min [:float "0.3"], :max [:float "15"]}]
- :pos [-86 -491]
- }
+ :pos [-86 -491]}
  "4o5hye4m7wkegc" 
 {:cable-midpoints 
 {1 [257 2]}
@@ -108,8 +103,7 @@
  :name "comb filter bank"
  :outputs [""]
  :parsed [:fn "Algorithm:Zip-With" [:tuple [:free-var "func"] [:free-var "as"] [:free-var "bs"]]]
- :pos [184 -87]
- }
+ :pos [184 -87]}
  "62e1q2ecrkjunfu" 
 {:color 4
  :inputs ["func" "as" "bs"]
@@ -117,8 +111,7 @@
  :name "gain compensation"
  :outputs [""]
  :parsed [:fn "Algorithm:Zip-With" [:tuple [:free-var "func"] [:free-var "as"] [:free-var "bs"]]]
- :pos [359 37]
- }
+ :pos [359 37]}
  "7204k9jblshgb4b" 
 {:color 4
  :ephemeral-inputs #{"numbers1"}
@@ -127,8 +120,7 @@
  :name "summation"
  :outputs [""]
  :parsed [:fn "Average" [:tuple [:free-var "numbers1"] [:free-var "numbers..."]]]
- :pos [388 190]
- }
+ :pos [388 190]}
  "7mo32ug5ol65lka" 
 {:cable-midpoints 
 {1 [232 -22]}
@@ -138,23 +130,20 @@
  :name "feedbacks"
  :outputs [""]
  :parsed [:fn "Algorithm:Map" [:tuple [:free-var "func"] [:free-var "set1"] [:free-var "set..."]]]
- :pos [186 -275]
- }
+ :pos [186 -275]}
  "7ulgk53payi9350" 
 {:color 4
  :inputs []
  :label "; follow the signal path by clicking on\none of the golden colored nodes and pressing the arrow up and down keys"
  :outputs []
  :parsed [:comment "follow the signal path by clicking on\none of the golden colored nodes and pressing the arrow up and down keys"]
- :pos [-469 237]
- }
+ :pos [-469 237]}
  "8vhu2ntxdqem93r" 
 {:inputs ["a"]
  :label "* 0.001"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "*" [:float "0.001"]]
- :pos [-343 -60]
- }
+ :pos [-343 -60]}
  "9xjfj55ml3sjsew" 
 {:ephemeral-inputs #{"fns1" "fns3" "fns2"}
  :flip-y true
@@ -162,15 +151,13 @@
  :label "Function:Pipeline($fns...)"
  :outputs [""]
  :parsed [:fn "Function:Pipeline" [:tuple [:free-var "fns1"] [:free-var "fns3"] [:free-var "fns2"] [:free-var "fns..."]]]
- :pos [64 -275]
- }
+ :pos [64 -275]}
  "9zspkd7dh1l6d1i" 
 {:inputs []
  :label "#1005"
  :outputs [""]
  :parsed [:invariant "1005"]
- :pos [-207 -491]
- }
+ :pos [-207 -491]}
  "d09ns6w004d41rb" 
 {:color 3
  :inputs []
@@ -178,8 +165,7 @@
  :name "tone"
  :outputs [""]
  :parsed [:widget "-qntrvx" 1 {:type :dial, :skin :circular, :min [:float "800"], :max [:float "16000"]}]
- :pos [525 164]
- }
+ :pos [525 164]}
  "dfo2nk9oi7sxm1k" 
 {:cable-midpoints 
 {}
@@ -187,29 +173,25 @@
  :label "1 /"
  :outputs [""]
  :parsed [:infix [:float "1"] "/" [:free-var "b"]]
- :pos [555 -191]
- }
+ :pos [555 -191]}
  "fq49amhdrgs2dz9" 
 {:inputs []
  :label "sig = arg"
  :outputs ["sig"]
  :parsed "arg"
- :pos [-510 -150]
- }
+ :pos [-510 -150]}
  "h0m4e28y2v58tmv" 
 {:inputs ["a" "b"]
  :label "Math:Pow($a $b)"
  :outputs [""]
  :parsed [:fn "Math:Pow" [:tuple [:free-var "a"] [:free-var "b"]]]
- :pos [-69 -215]
- }
+ :pos [-69 -215]}
  "h1d1pw16bkpl6oi" 
 {:inputs []
  :label "; shorter comb filters have stronger resonances due to the way feedback coefficients are computed.\n\n\nhere we compensate for their pole radii: since the gain coefs are negative, we can obtain `(1 - r)` by just adding 1.\n\n\nthe last (longest) delay line gain is used as a reference point to normalize levels."
  :outputs []
  :parsed [:comment "shorter comb filters have stronger resonances due to the way feedback coefficients are computed.\n\n\nhere we compensate for their pole radii: since the gain coefs are negative, we can obtain `(1 - r)` by just adding 1.\n\n\nthe last (longest) delay line gain is used as a reference point to normalize levels."]
- :pos [670 -113]
- }
+ :pos [670 -113]}
  "nw2cxjrgul5jqmq" 
 {:color 4
  :inputs ["sig" "cutoff"]
@@ -217,8 +199,7 @@
  :name "tone filter"
  :outputs [""]
  :parsed [:fn "Filter:Lpf6" [:tuple [:free-var "sig"] [:free-var "cutoff"]]]
- :pos [494 281]
- }
+ :pos [494 281]}
  "p078qv92vbcd41d" 
 {:cable-midpoints 
 {1 [50 -27]}
@@ -229,15 +210,13 @@
  :name "allpass cascade"
  :outputs [""]
  :parsed [:fn "Algorithm:Reduce" [:tuple [:free-var "func"] [:free-var "set1"] [:free-var "set2"] [:free-var "set..."]]]
- :pos [178 283]
- }
+ :pos [178 283]}
  "p7f9pruzpaenaiz" 
 {:inputs []
  :label "0.001"
  :outputs [""]
  :parsed [:float "0.001"]
- :pos [-207 -215]
- }
+ :pos [-207 -215]}
  "poaa8yqfniszbf" 
 {:ephemeral-inputs #{"set1"}
  :inputs ["func" "set1" "set..."]
@@ -245,8 +224,7 @@
  :name "comb levels"
  :outputs [""]
  :parsed [:fn "Algorithm:Map" [:tuple [:free-var "func"] [:free-var "set1"] [:free-var "set..."]]]
- :pos [381 -142]
- }
+ :pos [381 -142]}
  "q3lzd8ne6czoiul" 
 {:cable-midpoints 
 {2 [28 113]}
@@ -255,24 +233,21 @@
  :label "*"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more1"] [:free-var "more..."]]
- :pos [215 38]
- }
+ :pos [215 38]}
  "r2gmsrtv3q8jc0x" 
 {:flip-y true
  :inputs ["N" "xs"]
  :label "Algorithm:Take-Last($N $xs)"
  :outputs ["" ""]
  :parsed [:fn "Algorithm:Take-Last" [:tuple [:free-var "N"] [:free-var "xs"]]]
- :pos [421 -286]
- }
+ :pos [421 -286]}
  "r4plbiagq5wofzj" 
 {:inputs []
  :label "[(#300 0.95) (#500 0.9) (#800 0.8)]"
  :name "delay times and feedbacks for allpasses"
  :outputs [""]
  :parsed [:list [:tuple [:invariant "300"] [:float "0.95"]] [:tuple [:invariant "500"] [:float "0.9"]] [:tuple [:invariant "800"] [:float "0.8"]]]
- :pos [-27 104]
- }
+ :pos [-27 104]}
  "r5v37ksf96mq8ol" 
 {:cable-midpoints 
 {0 [49 81]}
@@ -282,30 +257,26 @@
  :name "predelay"
  :outputs [""]
  :parsed [:fn "Delay:Static-Delay" [:tuple [:free-var "sig"] [:free-var "delay-time"] [:free-var "buffer-size"]]]
- :pos [-222 14]
- }
+ :pos [-222 14]}
  "r837y0ctzo20nfr" 
 {:inputs []
  :label "#1"
  :outputs [""]
  :parsed [:invariant "1"]
- :pos [297 -279]
- }
+ :pos [297 -279]}
  "s7w9t675808c3m5" 
 {:inputs ["a"]
  :label "+ 1"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "+" [:float "1"]]
- :pos [284 -141]
- }
+ :pos [284 -141]}
  "sjccrmo2omka20l" 
 {:ephemeral-inputs #{"more1"}
  :inputs ["a" "b" "more1" "more..."]
  :label "/"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "/" [:free-var "b"] [:free-var "more1"] [:free-var "more..."]]
- :pos [-70 -275]
- }
+ :pos [-70 -275]}
  "t6hspf34rggd619" 
 {:color 3
  :inputs []
@@ -313,8 +284,7 @@
  :name "pre-delay"
  :outputs [""]
  :parsed [:widget "-sf6q6g" 0.395 {:type :dial, :skin :circular, :min [:float "20"], :max [:float "250"]}]
- :pos [-506 -67]
- }
+ :pos [-506 -67]}
  "ucftqzprfht94h2" 
 {:cable-midpoints 
 {0 [28 -85]}
@@ -323,58 +293,50 @@
  :name "sample rate"
  :outputs [""]
  :parsed [:fn "Rate-of" [:tuple [:free-var "sig"]]]
- :pos [-327 -320]
- }
+ :pos [-327 -320]}
  "udt39aq7vwa8b1g" 
 {:color 4
  :inputs ["sig"]
  :label "o))"
  :outputs ["thru"]
  :parsed [:playback [:free-var "sig"]]
- :pos [451 404]
- }
+ :pos [451 404]}
  "xen1yxzkw7lvsa8" 
 {:inputs ["a"]
  :label "Neg($a)"
  :outputs [""]
  :parsed [:fn "Neg" [:tuple [:free-var "a"]]]
- :pos [14 -158]
- }
+ :pos [14 -158]}
  "xt39lg2ao26b9dm" 
 {:color 4
  :inputs ["sig" "num-samples" "feedback"]
  :label "Delay:Comb($sig $num-samples $feedback)"
  :outputs [""]
  :parsed [:fn "Delay:Comb" [:tuple [:free-var "sig"] [:free-var "num-samples"] [:free-var "feedback"]]]
- :pos [-4 -40]
- }
+ :pos [-4 -40]}
  "xz4erv59347b3j8" 
 {:inputs []
  :label "#21000"
  :outputs [""]
  :parsed [:invariant "21000"]
- :pos [-347 -140]
- }
+ :pos [-347 -140]}
  "y9dgupyxo3ld123" 
 {:inputs ["a"]
  :label "* #1.21"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "*" [:invariant "1.21"]]
- :pos [-350 -496]
- }
+ :pos [-350 -496]}
  "zb86980g7n83way" 
 {:inputs []
  :label "; # Mono Reverb #\n\n\nThis is a classic Schroeder reverberator\nwith 8 delay lines and 3 allpass filters."
  :outputs []
  :parsed [:comment "# Mono Reverb #\n\n\nThis is a classic Schroeder reverberator\nwith 8 delay lines and 3 allpass filters."]
- :pos [404 -490]
- }
+ :pos [404 -490]}
  "zlr3cocyu4kj9rk" 
 {:inputs []
  :label "#8"
  :outputs [""]
  :parsed [:invariant "8"]
- :pos [-489 -463]
- }}
+ :pos [-489 -463]}}
  :scale 0.9575428403149415
  :scroll [0 0]}}

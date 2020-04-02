@@ -47,7 +47,7 @@
  :label "Math:Mix($a $b $mix)"
  :outputs [""]
  :parsed [:fn "Math:Mix" [:tuple [:free-var "a"] [:free-var "b"] [:free-var "mix"]]]
- :pos [-204 304]}
+ :pos [-206 280]}
  "5tvdztkl550cw9m" 
 {:cable-midpoints 
 {1 [182 -20]}
@@ -56,33 +56,33 @@
  :name "feedback"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more..."]]
- :pos [66 97]}
+ :pos [64 73]}
  "6ga99y9sata31c4" 
 {:inputs []
  :label "20 -x- 20000"
  :name "tone"
  :outputs [""]
  :parsed [:widget "-fvqvja" 0.7461905343191965 {:type :slider, :limits [[:float "20"] [:float "20000"]], :render [:limits], :size 3, :orientation :vertical, :curve :exponential}]
- :pos [80 -199]}
+ :pos [78 -223]}
  "97wz64hwz2vaa69" 
 {:inputs []
  :label "; # Echo #\n\n\nThis patch demonstrates a feedback path\nincluding a gain coefficient and a lowpass filter\nto produce a dampening echo."
  :outputs []
  :parsed [:comment "# Echo #\n\n\nThis patch demonstrates a feedback path\nincluding a gain coefficient and a lowpass filter\nto produce a dampening echo."]
- :pos [416 -270]}
+ :pos [414 -294]}
  "ab6jzo43ea18e13" 
 {:inputs []
  :label "#48000"
  :outputs [""]
  :parsed [:invariant "48000"]
- :pos [-129 -33]}
+ :pos [-131 -57]}
  "b8zo3r5zcjs42bo" 
 {:inputs ["sig" "cutoff" "resonance"]
  :label "Filter:Lowpass($sig $cutoff $resonance)"
  :name "high damp"
  :outputs [""]
  :parsed [:fn "Filter:Lowpass" [:tuple [:free-var "sig"] [:free-var "cutoff"] [:free-var "resonance"]]]
- :pos [199 96]}
+ :pos [197 72]}
  "c3m7sqycp6dr1iv" 
 {:cable-midpoints 
 {1 [-154 -201]}
@@ -90,19 +90,19 @@
  :label "+"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "+" [:free-var "b"] [:free-var "more..."]]
- :pos [-279 -39]}
+ :pos [-281 -63]}
  "h7w1zf62g6dt1q7" 
 {:inputs []
  :label "(sig delay feedback mix) = arg"
  :outputs ["sig" "delay" "feedback" "mix"]
  :parsed "arg"
- :pos [-457 -9]}
+ :pos [-459 -33]}
  "mgu4om8wiz37our" 
 {:inputs ["sig" "delay-time" "buffer-size"]
  :label "Delay:Static-Delay($sig $delay-time $buffer-size)"
  :outputs [""]
  :parsed [:fn "Delay:Static-Delay" [:tuple [:free-var "sig"] [:free-var "delay-time"] [:free-var "buffer-size"]]]
- :pos [-108 98]
+ :pos [-110 74]
  :selected true}
  "pxeced5dt4yrdd6" 
 {:cable-midpoints 
@@ -112,18 +112,18 @@
  :name "feedback path"
  :outputs [""]
  :parsed [:fn "z-1" [:tuple [:free-var "sig~"]]]
- :pos [396 -4]}
+ :pos [394 -28]}
  "pyyl63b8z6o31cu" 
 {:inputs []
  :label "0"
  :outputs [""]
  :parsed [:float "0"]
- :pos [218 2]}
+ :pos [216 -22]}
  "wqtslut88cdjt6r" 
 {:inputs ["sig"]
  :label "o))"
  :outputs ["thru"]
  :parsed [:playback [:free-var "sig"]]
- :pos [8 303]}}
+ :pos [6 279]}}
  :scale 1
  :scroll [0 0]}}

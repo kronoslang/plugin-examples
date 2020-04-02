@@ -245,13 +245,13 @@
  }
  "dtrhu5bj7jom5f" 
 {:cable-midpoints 
-{1 [98 -70]}
+{1 [62 -104]}
  :flip-y true
  :inputs ["a" "b"]
  :label "Math:Pow($a #1 / ($b - #1))"
  :outputs [""]
  :parsed [:fn "Math:Pow" [:tuple [:free-var "a"] [:infix [:invariant "1"] "/" [:tuple [:infix [:free-var "b"] "-" [:invariant "1"]]]]]]
- :pos [-299 -525]
+ :pos [-242 -522]
  }
  "gqdxfah0nk40l4a" 
 {:color 4
@@ -390,12 +390,12 @@
  }
  "znpcr3wdfoucskp" 
 {:cable-midpoints 
-{1 [37 82]}
+{1 [7 59]}
  :inputs ["a" "b" "more..."]
  :label "*"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more..."]]
- :pos [-321 -338]
+ :pos [-331 -394]
  }
  "zu5aa17z2ybkkb3" 
 {:flip-y true
